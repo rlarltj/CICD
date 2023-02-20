@@ -17,10 +17,6 @@ public class HelloController {
 	public String hello() {
 		log.info("hello controller");
 
-		User user = User.builder()
-			.username("kiseo").build();
-		userRepository.save(user);
-
 		return "hello";
 	}
 }
