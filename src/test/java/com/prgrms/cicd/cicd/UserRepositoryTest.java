@@ -25,4 +25,18 @@ class UserRepositoryTest {
 
 		Assertions.assertEquals(findUser, user);
 	}
+
+	@Test
+	void test2() {
+
+		User user = User.builder()
+			.username("testUser2")
+			.build();
+
+		userRepository.save(user);
+
+		User findUser = userRepository.findById(user.getId()).get();
+
+		Assertions.assertEquals(findUser, user);
+	}
 }
