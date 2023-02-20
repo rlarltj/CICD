@@ -56,7 +56,6 @@ class UserRepositoryTest {
 
 	@Test
 	void test4() {
-
 		User user = User.builder()
 			.username("testUser4")
 			.build();
