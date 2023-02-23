@@ -40,7 +40,9 @@ jobs:
 
       # 빌드
       - name: Build with Gradle
-        run: ./gradlew clean bootJar
+        run: |
+          chmod +x ./gradlew
+          ./gradlew clean bootJar
 
       #빌드 후 도커 허브로 push
       - name: Docker build & push to prod
